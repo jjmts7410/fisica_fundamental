@@ -1,0 +1,135 @@
+/* --- GENERAL --- */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f5f7fb;
+    color: #222;
+    scroll-behavior: smooth;
+}
+
+/* --- GLASS NAVBAR --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.35);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    z-index: 999;
+}
+
+.navbar h3 {
+    font-weight: 600;
+    color: #003f7d;
+}
+
+.navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #003f7d;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #0077ff;
+}
+
+/* --- HERO --- */
+.hero {
+    height: 60vh;
+    background: url("https://images.unsplash.com/photo-1535223289827-42f1e9919769") center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 40, 80, 0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeSlide 1s ease-out;
+}
+
+.autor {
+    opacity: 0.85;
+    font-size: 14px;
+}
+
+/* --- SECTIONS --- */
+.section {
+    padding: 80px 10%;
+    animation: fade 1s ease-out;
+}
+
+.alt {
+    background: #eaf1ff;
+}
+
+h2 {
+    font-size: 30px;
+    color: #003f7d;
+    margin-bottom: 10px;
+}
+
+/* --- CARDS --- */
+.card {
+    background: white;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    animation: fadeSlide 0.8s ease-out;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #0055aa;
+}
+
+.formula {
+    margin: 15px 0;
+    padding: 12px;
+    background: #eef5ff;
+    border-left: 4px solid #0077ff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.big {
+    font-size: 28px;
+    text-align: center;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #003f7d;
+    color: white;
+    margin-top: 60px;
+}
+
+/* --- ANIMACIONES --- */
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
